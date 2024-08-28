@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { CocktailFormComponent } from './cocktail-form.component';
+
+describe('CocktailFormComponent', () => {
+  let component: CocktailFormComponent;
+  let fixture: ComponentFixture<CocktailFormComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [CocktailFormComponent]
+    });
+    fixture = TestBed.createComponent(CocktailFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
