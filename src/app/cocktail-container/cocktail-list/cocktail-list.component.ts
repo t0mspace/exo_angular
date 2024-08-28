@@ -10,5 +10,7 @@ export class CocktailListComponent implements OnInit {
   @Input() public cocktails: Cocktail[] | null = null;
   public search= '';
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.cocktails);
+  }
 }

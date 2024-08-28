@@ -11,5 +11,9 @@ import { Observable, Subscription } from 'rxjs';
 export class CocktailContainerComponent {
   public cocktails$: Observable<Cocktail[]> = this.cocktailService.cocktails$;
 
-  constructor(private cocktailService: CocktailService) {}
+  constructor(private cocktailService: CocktailService) {
+    console.log(this.cocktails$);
+  }
+
+
 }

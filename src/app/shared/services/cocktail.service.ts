@@ -12,7 +12,7 @@ export class CocktailService {
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
-    this.seeds();
+    //this.seeds();
   }
   public getById(index: number): Cocktail {
     const cocktailIndex = this.cocktails$.value;
@@ -26,7 +26,9 @@ export class CocktailService {
   {
     return this.httpClient
           .get("https://restapi.fr/api/cocktailstb")
-          .pipe(tap(cocktails: Cocktail[]) => this.cocktails$.next(cocktails));
+          .pipe(
+            tap((cocktails: Cocktail[]) => this.cocktails$.next(cocktails))
+          );
   }
 
   public addCocktail(cocktail: Cocktail): void {

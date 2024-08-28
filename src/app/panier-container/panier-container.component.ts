@@ -20,6 +20,8 @@ export class PanierContainerComponent implements OnInit, OnDestroy {
         (ingredients: Ingredient[] | null) => (this.ingredients = ingredients)
       )
     );
+
+    
   }
 
   ngOnDestroy() {
