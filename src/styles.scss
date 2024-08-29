@@ -17,6 +17,22 @@ a {
   color: inherit;
 }
 
+input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px 15px;
+}
+
+hr {
+  margin: 20px 0px;
+  border-top: 1px solid #ddd;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 :root {
   --font-family: "Roboto", sans-serif;
   --primary: #546de5;
@@ -106,6 +122,10 @@ body {
   margin-bottom: 20px;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 // theme
 .list-primary-action {
   li {
@@ -125,6 +145,11 @@ body {
   color: white;
   font-size: 12px;
   font-weight: 500;
+}
+
+.active {
+  background-color: var(--secondary);
+  color: white;
 }
 
 .list-primary {
@@ -150,9 +175,7 @@ body {
   border: 0;
   border-radius: 3px;
   font-weight: 700;
-  margin-right: 5px;
   cursor: pointer;
-  &-secondary {background-color: #ddd;}
   &-primary {
     background-color: var(--primary);
     color: white;
@@ -160,6 +183,9 @@ body {
       background-color: var(--secondary);
     }
     transition: background-color 0.4s;
+  }
+  &-secondary {
+    background-color: #ddd;
   }
 }
 
@@ -171,22 +197,4 @@ body {
 
 .d2 {
   border: 1px solid green;
-}
-
-
-//form
-input{
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 8px 15px;
-}
-
-
-
-.form-group{
-  margin-bottom: 10px;
-  label{
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
 }

@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Cocktail } from '../shared/interfaces/cocktail.interface';
 import { CocktailService } from '../shared/services/cocktail.service';
-import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cocktail-container',
@@ -9,11 +9,8 @@ import { Observable, Subscription } from 'rxjs';
   styleUrls: ['./cocktail-container.component.scss'],
 })
 export class CocktailContainerComponent {
-  public cocktails$: Observable<Cocktail[]> = this.cocktailService.cocktails$;
+  public cocktails$: Observable<Cocktail[] | []> =
+    this.cocktailService.cocktails$;
 
-  constructor(private cocktailService: CocktailService) {
-    console.log(this.cocktails$);
-  }
-
-
+  constructor(private cocktailService: CocktailService) {}
 }

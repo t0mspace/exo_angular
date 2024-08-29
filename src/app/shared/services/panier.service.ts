@@ -9,7 +9,7 @@ export class PanierService {
 
   constructor() {}
 
-  addToPanier(ingredients: Ingredient[]): void {
+  addPanier(ingredients: Ingredient[]): void {
     const currentValue = this.ingredients$.value;
     if (currentValue) {
       const obj = [...currentValue, ...ingredients].reduce(
